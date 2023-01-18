@@ -1,0 +1,149 @@
+//resolution 320 - 480px
+
+//<!-- volyk -->
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .header {
+    &__wrapper {
+      height: 718px;
+    }
+    &__navbar {
+      background-color: #27262a;
+      height: 103px;
+      p {
+        display: none;
+      }
+    }
+
+    .header__navbar-list-button-menu {
+      display: block;
+      &-image-active {
+        background: url("@img/header/Menu_close2.png");
+      }
+    }
+
+    .header__navbar-list {
+      display: none;
+    }
+
+    &__navbar-list {
+      background-color: #333333;
+      @include flex(column, flex-start, flex-start);
+      width: 292px;
+      height: 379px;
+      top: 103px;
+      &-item {
+        // display: block;
+        width: 100%;
+        @include flex(row, flex-start, center);
+        height: 91px;
+        border-bottom: 3px solid #3b3b3b;
+        cursor: pointer;
+        @include font-properties(
+          $secondary-font-name,
+          $font-size-mm,
+          $weight-size-medium,
+          $eleventh-line-height,
+          $primary-color
+        );
+        &-back-line {
+          width: 8px;
+          height: 53px;
+          background-color: #333333;
+        }
+        p {
+          display: block;
+          padding-left: 29px;
+          @include font-properties(
+            $secondary-font-name,
+            $font-size-mm,
+            $weight-size-medium,
+            $eleventh-line-height,
+            $primary-color
+          );
+        }
+      }
+    }
+
+    &__navbar-list-item:hover {
+      .header__navbar-list-item-back-line {
+        display: block;
+        background-color: #8d81ac;
+      }
+      p {
+        color: #8d81ac;
+      }
+    }
+
+    &__tittle-wrapper {
+      @include flex(column, flex-start, center);
+      h1 {
+        @include font-properties(
+          $secondary-font-name,
+          $font-size-l,
+          $weight-size-fat,
+          $eighteenth-line-height,
+          $primary-color
+        );
+        margin-top: 50px;
+        text-align: center;
+      }
+      p {
+        @include font-properties(
+          $secondary-font-name,
+          $font-size-xss,
+          $weight-size-medium,
+          $tenth-line-height,
+          $secondary-color
+        );
+        margin-top: 19px;
+        text-align: center;
+      }
+      :last-child {
+        @include font-properties(
+          $secondary-font-name,
+          $font-size-xs,
+          $weight-size-medium,
+          $third-line-height,
+          $third-color
+        );
+        margin-top: 14px;
+      }
+    }
+    &__download-button {
+      width: 290px;
+      height: 45px;
+      @include font-properties(
+        $secondary-font-name,
+        $font-size-xss,
+        $weight-size-fat,
+        $sixth-line-height,
+        $primary-color
+      );
+    }
+    &__download-conditions {
+      margin-top: 35px;
+      @include font-properties(
+        $secondary-font-name,
+        $font-size-3xs,
+        $weight-size-medium,
+        $first-line-height,
+        $third-color
+      );
+    }
+  }
+
+  .main__testimonials {
+    &-services-wrapper {
+      margin-top: 82px;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 45px;
+      column-gap: 87px;
+    }
+    &-demarcation-line {
+      width: 81%;
+      margin-top: 22px;
+    }
+  }
+}

@@ -1,0 +1,97 @@
+//resolution 481 - 992px
+
+//<!-- volyk -->
+
+@media (max-width: 992px) {
+  .header {
+    &__navbar {
+      background-color: #27262a;
+    }
+
+    &__navbar-list {
+      position: absolute;
+      top: 85px;
+      right: 0;
+      left: 0;
+      margin: auto;
+      width: auto;
+      max-width: 517px;
+      padding-left: 10px;
+      padding-right: 10px;
+
+      &-button {
+        margin: 0px;
+      }
+    }
+
+    &__tittle-wrapper {
+      h1 {
+        @include font-properties(
+          $secondary-font-name,
+          $font-size-2xxl,
+          $weight-size-fat,
+          $twenty-second-line-height,
+          $primary-color
+        );
+        margin-top: 69px;
+      }
+      p {
+        @include font-properties(
+          $secondary-font-name,
+          $font-size-m,
+          $weight-size-medium,
+          $tenth-line-height,
+          $secondary-color
+        );
+        margin-top: 19px;
+      }
+      :last-child {
+        @include font-properties(
+          $secondary-font-name,
+          $font-size-3xs,
+          $weight-size-medium,
+          $first-line-height,
+          $third-color
+        );
+      }
+    }
+    &__download-conditions {
+      @include font-properties(
+        $secondary-font-name,
+        $font-size-3xs,
+        $weight-size-medium,
+        $third-line-height,
+        $third-color
+      );
+    }
+  }
+
+  .main__testimonials {
+    &-tittle {
+      margin-top: 86px;
+      text-align: center;
+      @include font-properties(
+        $secondary-font-name,
+        $font-size-2ml,
+        $weight-size-fat,
+        $seventeenth-line-height,
+        $primary-color
+      );
+    }
+
+    &-services-wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 60px;
+      column-gap: 60px;
+    }
+
+    &-description {
+      margin-top: 68px;
+    }
+
+    &-demarcation-line {
+      width: 74%;
+    }
+  }
+}

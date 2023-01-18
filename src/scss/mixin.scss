@@ -1,0 +1,48 @@
+//-- Volyk --
+@mixin flex ($fd, $jc, $ai) {
+    display: flex;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin font-properties ($ff, $fs, $fw, $lh, $c) {
+    font-family: $ff;
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: $lh;
+    color: $c;
+}
+//--Amanbaev--
+@mixin flx-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin grd-start {
+    display: grid;
+    justify-items: center;
+    align-items: start;
+    grid-template-columns: auto 405px;
+
+}
+@mixin grd-center {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+@mixin item-text {
+    font-family: $lato;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 16px;
+    line-height: 24px;
+
+}
+
+@mixin delta {
+    font-weight: $weight-size-fat;
+    font-size: 48px;
+    line-height: 50px;
+    color: $secondary-color;
+}

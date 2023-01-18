@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title":"Главная" })
+  <body>
+    
+      <div class="header">
+        @@include('html/header.html',{})
+      </div>
+
+    <main>
+
+      <section class="revosection">
+        @@include('html/present_text.html',{}) 
+      </section>
+
+      <section class="youget">
+        @@include('html/features.html',{})
+      </section>
+
+      <div class="main__testimonials">
+        @@include('html/testimonials.html',{})
+      </div>
+
+      <section class="pricing">
+        @@include('html/pricing.html',{})
+      </section>
+
+    </main>
+
+    <script src="dist/js/app.min.js"></script>
+  </body>
+</html>

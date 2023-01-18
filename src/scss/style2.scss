@@ -1,0 +1,489 @@
+@import "reset";
+@import "fonts";
+@import "mixin";
+@import "variables";
+
+.revosection__title {
+    margin: 66px 0 0;
+    text-align: center;
+    font-size: 54px;
+    font-weight: 700;
+    line-height: 54px;
+    color: $fourth-color;
+    text-transform: uppercase;
+}
+
+.revosection__undertitle {
+    margin-top: 35px;
+    text-align: center;
+    font-family: Lato;
+    font-size: 21px;
+    font-weight: 400;
+    font-weight: $weight-size-medium;
+    line-height: 32px;
+    color: $fifth-color;
+}
+
+.revosection__second__undertitle {
+    text-align: center;
+    font-family: Lato;
+    font-size: 21px;
+    font-weight: $weight-size-medium;
+    line-height: 32px;
+    color: $fifth-color;
+}
+
+.revosection__icons-menu {
+    @include flx-center;
+    margin-top: 25px;
+    margin-bottom: 70px;
+    font-family: 'Montserrat';
+
+    &__item {
+        @include flx-center;
+        border: 1px solid lightgray;
+        border-radius: 5px;
+        margin-left: 15px;
+    }
+    
+    &__item__cell {
+        display: flex;
+        align-items: center;
+        padding: 4px 12px;
+        border-color: #fafbfc;
+        border-right: 1px solid lightgray;
+    }
+    &__item__number {
+        padding: 4px 12px;
+        font-size: 12px;
+        color: $fifth-color;
+        font-weight: 600;
+    }
+    &__item__text {
+        margin-left: 4px;
+        font-size: 14px;
+        color: fifth-color;
+        font-weight: 600;
+    }
+}
+
+// ---------YOU GET-------------- 
+
+.youget {
+    background: #f4f4f4;
+    font-family: 'Montserrat';
+}
+
+.youget__grid {
+    display: grid;
+    padding-left: 90px;
+    padding-top: 90px;
+    padding-bottom: 33px;
+    grid-template-columns: 0.9fr 1 fr;
+    gap: 0 30px;
+    justify-items: center;
+    align-items: flex-end;
+    grid-template-areas: 
+    'item1 slogan '
+    'item2 picture'
+    'item3 picture'
+    'item4 picture';
+}
+
+.youget__grid__item1 {
+    grid-area: item1;
+    @include grd-start;
+    column-gap: 24px;
+}
+
+.youget__grid__item2 {
+    grid-area: item2;
+    @include grd-start;
+    column-gap: 42px;
+}
+
+.youget__grid__item3 {
+    grid-area: item3;
+    @include grd-start;
+    column-gap: 70px;
+}
+
+.youget__grid__item4 {
+    grid-area: item4;
+    @include grd-start;
+    column-gap: 58px;
+  }
+
+  .youget__grid__item5 {
+    grid-area: slogan;
+    align-self: flex-start;
+    justify-self: left;
+  }
+  .youget__grid__item6 {
+    grid-area: picture;
+    width: 100%;
+    justify-self: end;
+    img {
+        width: 100%;
+    }
+}
+
+  .youget__grid__slogan {
+    padding-left: 20px;
+    font-weight: $weight-size-fat;
+    font-size: 48px;
+    line-height: 50px;
+    color: $secondary-color;
+}
+
+.youget__grid__slogan::before {
+    content: "<";
+    @include delta;
+}
+
+.youget__grid__slogan::after {
+    content: '>';
+    @include delta;
+}
+
+.youget__grid__itemtitle {
+    font-size: 16px;
+    line-height: 21px;
+    color: $fifth-color;
+    font-weight: $weight-size-medium;
+    text-align: left;
+}
+
+.youget__grid__itemtext {
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 21px;
+    color: $third-color ;
+    font-weight: $weight-size-medium;
+}
+
+// @media
+
+@media (min-width: 481px) and (max-width: 992px) {
+    .revosection__title{
+        margin: 93px 0 0;
+
+    }
+    .youget {
+        background: #fff;
+    }
+    .youget__grid {
+        display: grid;
+        padding: 0 30px 0;
+        grid-template-columns: auto;
+        gap: 50px 0;
+        justify-items: center;
+        align-items: flex-end;
+        grid-template-areas:
+        "slogan"
+        "item1"
+        "item2"
+        "item3"
+        "item4"
+        "picture";
+
+          .youget__grid__item1 {
+            grid-area: item1;
+            grid-template-columns: auto auto;
+          }
+
+          .youget__grid__item2 {
+            grid-area: item2;
+            grid-template-columns: auto auto;
+          }
+
+          .youget__grid__item3 {
+            grid-area: item3;
+            grid-template-columns: auto auto;
+          }
+
+          .youget__grid__item4 {
+            grid-area: item4;
+            grid-template-columns: auto auto;
+          }
+
+          .youget__grid__item5 {
+            grid-area: slogan;
+            justify-self: center;
+          }
+
+          .youget__grid__item6 {
+            grid-area: picture;
+
+          }
+          .youget__grid__slogan{
+              margin: 0 auto;
+              text-align: center;
+          }
+    }
+}
+//Макет 320 пикселей показывает как будет выглядеть контент при размере экрана от 320 до 480 (!) пикселей.
+
+@media (min-width: 320px) and (max-width: 480px){
+    .revosection__title{
+        margin: 80px 0 0;
+        padding: 0 10px 0;
+        font-size: 26px;
+        line-height: 28px;
+    }
+    .revosection__txtundertitle, .revosection__txtundertitle__secondLine{
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .revosection__icons-menu{
+
+        margin: 0;
+        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .revosection__icons-menu__item{
+        margin: 20px 0 0;
+    }
+    .revosection__icons-menu__item:first-child{
+        margin: 20px 10px 0 0;
+    }
+
+
+    .youget{
+        background: #fff;
+        padding: 0;
+    }
+
+
+    .youget__grid{
+        grid-template-columns: 100%;
+        justify-items: center;
+        padding: 0 20px 0;
+        grid-template-rows: none;
+        gap: 38px 0;
+        grid-template-areas:
+        "slogan"
+        "item1"
+        "item2"
+        "item3"
+        "item4"
+        "picture";
+
+        &__item1, &__item2, &__item3, &__item4{
+            grid-template-columns: 100%;
+            gap: 25px;
+            padding: 0 5px 0;
+        }
+        &__slogan {
+            //width: 230px;
+            margin: 120px auto 0;
+            font-size: 32px;
+            text-align: center;
+            line-height: 38px;
+            color: $secondary-color;
+            &::after, &::before{
+                font-size: 32px;
+                line-height: 38px;
+            }
+            &::after{
+                content: ">";
+            }
+            &::before{
+                content: "<";
+            }
+        }
+        
+        .youget__grid__item__title {
+            font-size: 16px;
+            line-height: 16px;
+            color: #323232;
+            font-weight: 400;
+            text-align: center;
+        }
+        .youget__grid__item__text {
+            margin-top: 15px;
+            font-size: 14px;
+            line-height: 21px;
+            color: #848E97;
+            font-weight: 400;
+            text-align: center;
+        }
+
+    }
+}
+
+// ----------------------------
+
+
+.pricing {
+    background-image: url(../img/pricing/banner.png);
+    background-size: cover;
+    background-position: center;
+    font-family: 'Montserrat';
+    &__title {
+      margin: 0;
+      padding: 83px 0 61px;
+      font-size: 48px;
+      line-height: 50px;
+      color: #fff;
+      font-weight: 700;
+      text-align: center;
+    }
+    &__cardBox {
+      width: 100%;
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      gap: 0 15px;
+      grid-template-columns: 257px 257px 300px 257px;
+      padding: 0 0 100px;
+      justify-content: center;
+      @media (max-width: 1130px) and (min-width: 992px) {
+        grid-template-columns: 22% 22% 30% 22%;
+        gap: 10px;
+        .pricing__card {
+          width: 99%;
+        }
+      }
+    }
+    &__card {
+      @include flx-center;
+      width: 257px;
+      flex-direction: column;
+      background-color: rgba(255, 255, 255, 0.11);
+      &:first-child {
+        .pricing__card__desc2 {
+          opacity: 0;
+        }
+      }
+      &:nth-child(3) {
+        height: 560px;
+        width: 300px;
+        justify-content: flex-start;
+        background-color: #463048;
+        .pricing__card__label {
+          background-color: rgba(0, 0, 0, 0.11);
+          padding: 43px 0;
+        }
+        .pricing__card__price,
+        .pricing__card__dollar {
+          font-size: 82px;
+          margin: 0 0 16px;
+        }
+        .pricing__card__descbox {
+          @include flx-center;
+          flex-direction: column;
+        }
+        .pricing__card__desc1 {
+          margin: 66px 0 0;
+        }
+        .pricing__card__desc2 {
+          margin: 0 0 86px;
+        }
+        .pricing__card__undrTxt {
+          margin: 0 0 45px;
+        }
+      }
+      &__label {
+        text-transform: uppercase;
+        padding: 36px 0;
+        font-size: 24px;
+        line-height: 24px;
+        color: #fff;
+        background-color: rgba(255, 255, 255, 0.06);
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        font-weight: 400;
+      }
+      &__price,
+      &__dollar {
+        margin: 10px 0 10px;
+        font-size: 60px;
+        line-height: 90px;
+        font-weight: 700;
+        color: #fff;
+      }
+      &__dollar {
+        font-weight: 400;
+      }
+      &__undrTxt {
+        font-size: 14px;
+        line-height: 16px;
+        margin: 0 0 38px;
+        color: #fff;
+      }
+      &__line {
+        width: 60px;
+        height: 5px;
+        background-color: #8d81ac;
+      }
+      &__desc1,
+      &__desc2 {
+        color: #fff;
+        line-height: 18px;
+      }
+      &__desc1 {
+        margin: 36px 0 0;
+      }
+      &__desc2 {
+        margin: 0 0 36px;
+      }
+      &__purchase {
+        text-transform: uppercase;
+        border: none;
+        padding: 15.5px 37px;
+        background-color: rgba(255, 255, 255, 0.15);
+        color: #fff;
+        border-radius: 50px;
+        margin: 0 0 36px;
+      }
+    }
+  }
+  
+  @media (min-width: 481px) and (max-width: 992px) {
+    .pricing {
+      &__cardBox {
+        grid-template-columns: none;
+        grid-template-areas:
+          "item1 item2"
+          "item3 item4";
+        gap: 30px 20px;
+      }
+  
+      &__card {
+        &:first-child {
+          justify-self: flex-end;
+        }
+        &:last-child {
+          align-self: flex-start;
+          margin: 40px 0 0;
+        }
+      }
+      @media (min-width: 481px) and (max-width: 610px) {
+        &__card:not(:nth-child(3)) {
+          width: 220px;
+        }
+        &__card:nth-child(3) {
+          width: 240px;
+        }
+      }
+    }
+  }
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    .pricing {
+      background-image: url(../img/pricing/banner.png);
+      &__title {
+        font-size: 28px;
+        padding: 14px 10px 32px;
+      }
+      &__cardBox {
+        grid-template-columns: 257px;
+        gap: 18px;
+        padding: 0 0 10px;
+      }
+    }
+  }
+
